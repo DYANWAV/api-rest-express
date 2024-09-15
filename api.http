@@ -1,0 +1,38 @@
+### Recuperar todas las películas
+
+GET http://localhost:1234/movies
+
+### Película por id
+GET http://localhost:1234/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+
+### Pelíclas por género
+GET http://localhost:1234/movies?genre=Action
+ 
+
+### Crear una pelicula con POST
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "id": "c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf",
+  "title": "Dark Knight",
+  "year": 2008,
+  "director": "Christopher Nolan",
+  "duration": 152,
+  "poster": "https://i.ebayimg.com/images/g/yokAAOSw8w1YARbm/s-l1200.jpg",
+  "genre": [
+    "Action",
+    "Crime",
+    "Drama"
+  ]
+}
+
+### Actualizar una pelicula
+PATCH http://localhost:1234/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+Content-Type: application/json
+
+{
+  "title": "HOla mundo pues"
+}
+
+
