@@ -14,13 +14,13 @@ app.use(
   })
 )
 
-app.use("/movies", moviesRouter)
-
 const PORT = process.env.PORT ?? 1234
 
 app.get("/", (req, res) => {
   res.json({ message: "Rest Api" })
 })
+
+app.use("/movies", moviesRouter)
 
 app.listen(PORT, () => {
   console.log(`Server listening on port http://localhost:${PORT}`)
